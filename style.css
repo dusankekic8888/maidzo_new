@@ -2,12 +2,13 @@
 
 
 html {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }
 
 body {
     background-color: #ededed;
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -134,7 +135,8 @@ header .keyword span a {
     color: black;
     margin-right: 10px;
 }
-header .keyword span a:hover{
+
+header .keyword span a:hover {
     color: #ea4335;
 }
 
@@ -175,12 +177,13 @@ header .navbar a {
 
 }
 
-header .navbar .active a{
+header .navbar .active a {
     border: 1px solid #fff;
 }
-header .navbar a:hover{
+
+header .navbar a:hover {
     border: 1px solid #fff;
-        font-weight: normal;
+    font-weight: normal;
 }
 
 header .navbar-toggler {
@@ -227,6 +230,9 @@ header .banner ul li img {
 
 .left-side img {
     height: 13px;
+    width: 13px;
+    position: relative;
+    top: 3px;
 }
 
 header .carousel-center {
@@ -720,6 +726,7 @@ footer a:hover {
     padding: 5px 20px;
     border-bottom: 1px dotted black;
 }
+
 /*---------- Order Box ----------*/
 
 .order-wrapper {
@@ -751,7 +758,7 @@ footer a:hover {
 .checkbox-group {
     position: relative;
     top: 6px;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: bold;
 }
 
@@ -785,7 +792,29 @@ footer a:hover {
 }
 
 .order-box-body table tr span.col-xl-2 {
-    font-size: 13px;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 400px) {
+    .order-box-after table tr td, table.col-12 td {
+        font-size: 14px;
+    }
+    
+    .checkbox-group {
+        font-size: 14px;
+    }
+    
+    .xacnhandonhang, .xoasanpham {
+        font-size: 9px !important;
+    }
+    
+    .cart-xacnhan .col-6 p span span {
+        display: block;
+    }
+    
+    .order-box-footer-body .card-block .card-title {
+        font-size: 12px;
+    }
 }
 
 .order-box-body table tr span.col-xl-2 span:first-child,
@@ -802,6 +831,10 @@ footer a:hover {
     padding: 0.5rem;
     background-color: #f5f5f5;
     border-bottom: 1px dotted #bcbcbc;
+    font-size: 16px;
+}
+
+.col-xl-5 .table td {
     font-size: 13px;
 }
 
@@ -1246,7 +1279,7 @@ order-box-footer-body .card-block {
     .bread {
         font-size: 12px;
     }
-    
+
     .button-group button {
         font-size: 7px !important;
     }
@@ -1274,4 +1307,98 @@ order-box-footer-body .card-block {
 
 .order-menu .row {
     margin-bottom: 5px;
+}
+
+@media screen and (max-width: 330px) {
+
+    .exchange-rate,
+    .signbar {
+        font-size: 10px !important;
+    }
+}
+
+.responsive-sidebar {
+    position: fixed;
+    left: 0;
+    top: 20%;
+    background: #252525;
+    padding: 0px;
+    z-index: 9999;
+    padding-bottom: 10px;
+}
+
+.responsive-sidebar .sidebar-menu {
+    padding-left: 0px;
+}
+
+.responsive-sidebar .sidebar-menu li {
+    list-style: none;
+    display: block;
+    clear: both;
+    float: left;
+    position: relative;
+    width: 100%;
+}
+
+.responsive-sidebar .sidebar-menu > li > a {
+    width: 50px;
+    text-align: center;
+}
+
+.responsive-sidebar .sidebar-menu li a {
+    color: #fff !important;
+    padding: 12px 5px 12px 5px;
+    display: inline-block;
+    position: relative;
+}
+
+.responsive-sidebar .sidebar-menu > li > a i {
+    font-size: 20px;
+}
+
+
+.responsive-sidebar .sidebar-menu li .treeview-menu {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    z-index: 9999;
+    background: #252525;
+    width: 200px;
+    padding: 10px;
+    text-align: left;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.responsive-sidebar .sidebar-menu li .treeview-menu span {
+    color: #fff;
+    float: left;
+    border-bottom: 1px solid #fff;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.responsive-sidebar .sidebar-menu .treeview:hover {
+    background: red;
+}
+
+.responsive-sidebar .sidebar-menu .treeview:hover > .treeview-menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.responsive-sidebar .sidebar-menu li .treeview-menu li:hover {
+    background: red;
+}
+
+@media screen and (max-width: 768px) {
+    .responsive-sidebar {
+        display: none !important;
+    }
 }
