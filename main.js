@@ -89,8 +89,8 @@ $(document).ready(function () {
     $("#open-sidebar").click(function () {
         $('#my-sidebar').toggle();
 
-        $("body").css({
-            "opacity": "0.8"
+        $("#body-overlay").css({
+            "display": "block"
         });
     });
 
@@ -98,8 +98,8 @@ $(document).ready(function () {
         if (e.target.id != 'hideme' && !$('#hideme').find(e.target).length) {
             $("#my-sidebar").hide();
 
-            $("body").css({
-                "opacity": "1"
+            $("#body-overlay").css({
+                "display": "none"
             });
         }
     });
