@@ -85,4 +85,22 @@ $(document).ready(function () {
             }
         });
     }).change();
+
+    $("#open-sidebar").click(function () {
+        $('#my-sidebar').toggle();
+
+        $("body").css({
+            "opacity": "0.8"
+        });
+    });
+
+    $(document).click(function (e) {
+        if (e.target.id != 'hideme' && !$('#hideme').find(e.target).length) {
+            $("#my-sidebar").hide();
+
+            $("body").css({
+                "opacity": "1"
+            });
+        }
+    });
 });

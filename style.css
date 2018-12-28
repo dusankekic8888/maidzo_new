@@ -322,6 +322,18 @@ header .carousel-center {
         top: -18px;
     }
 
+    .top-mobile {
+        display: block !important;
+    }
+
+    .top-mobile p {
+        margin: 0;
+    }
+
+    .top-desk {
+        display: none !important;
+    }
+
     header .logo img {
         margin: 0 auto;
     }
@@ -796,22 +808,25 @@ footer a:hover {
 }
 
 @media screen and (max-width: 400px) {
-    .order-box-after table tr td, table.col-12 td {
+
+    .order-box-after table tr td,
+    table.col-12 td {
         font-size: 14px;
     }
-    
+
     .checkbox-group {
         font-size: 14px;
     }
-    
-    .xacnhandonhang, .xoasanpham {
+
+    .xacnhandonhang,
+    .xoasanpham {
         font-size: 9px !important;
     }
-    
+
     .cart-xacnhan .col-6 p span span {
         display: block;
     }
-    
+
     .order-box-footer-body .card-block .card-title {
         font-size: 12px;
     }
@@ -1401,4 +1416,60 @@ order-box-footer-body .card-block {
     .responsive-sidebar {
         display: none !important;
     }
+}
+
+
+.side-navigation {
+    height: 100%;
+    width: 190px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    z-index: 9999;
+}
+
+#my-sidebar {
+    display: none;
+}
+
+.menuForMobile img {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fff;
+}
+
+.side-navigation a {
+    color: #818181;
+    font-size: 14px;
+    text-transform: none !important;
+    display: block;
+    padding: 5px 5px 5px 15px;
+}
+
+.side-navigation a:hover {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.side-navigation #close-button {
+    font-size: 20px;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    outline: none;
+}
+
+.side-navigation #close-button:hover {
+    outline: none;
+    border: none;
+}
+
+.menuForMobile .dropdown-menu a {
+    background: #fff !important;
+    color: black !important;
 }
